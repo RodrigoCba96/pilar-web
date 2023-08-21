@@ -148,6 +148,7 @@ const Menu = ({ items }) => {
 
 const SideMenu = ({ open, onClose }) => {
     const { pathName } = useLocation();
+    
     useEffect(() => {
         if (open) {
             onClose();
