@@ -14,7 +14,6 @@ const Dashboard = ({ open, onClose }) => {
 
   const tasks = useSelector(appSelector.todo);
 
-  // Filtrar tareas completadas y pendientes
   const completedTasks = tasks.filter(task => task.completed);
   const pendingTasks = tasks.filter(task => !task.completed);
 
@@ -28,7 +27,6 @@ const Dashboard = ({ open, onClose }) => {
         </Paper>
       </Grid>
 
-      {/* Agrega las tarjetas aquí */}
       <Grid item xs={6}>
         <CompletedTasksCard completedTasks={completedTasks} />
       </Grid>

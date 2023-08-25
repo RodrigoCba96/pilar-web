@@ -35,7 +35,7 @@ export const appReducer = (state = stateInitial, action) => {
           {
             id: action.payload.id,
             text: action.payload.text,
-            completed: false,
+            completed: true,
           },
         ],
       };
@@ -46,7 +46,7 @@ export const appReducer = (state = stateInitial, action) => {
           if (t.id === action.payload.id) {
             return {
               ...t,
-              completed: action.payload.completed,
+              completed: action.payload.completed
             };
           }
           return t;
